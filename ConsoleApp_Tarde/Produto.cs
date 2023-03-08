@@ -12,23 +12,40 @@ namespace ConsoleApp_Tarde
         private string Descricao;
         private decimal Valor;
 
-        public Produto(string descricao, int id, decimal valor)
+        public Produto(int id, string descricao, decimal valor)
         {
             Id = id;
             Descricao = descricao;
             Valor = valor;
         }
+        public string getId()
+        {
+            return "Código:" + Id;
+        }
+
+        public void setId(int id) 
+        {
+            Id = id;
+        }
         public string getDescricao()
         {
             return "Descrição do produto: " + Descricao;
+        }
+        public void setDescricao(string descricao) 
+        {
+            Descricao = descricao;
         }
         public string getValor()
         {
             return "Valor em R$ " + Valor;
         }
-        public string getId()
+
+        public void setValor(decimal valor)
         {
-            return "Código:" + Id;
+            if (valor > 0)
+            {
+                Valor = valor;
+            }
         }
 
     }
