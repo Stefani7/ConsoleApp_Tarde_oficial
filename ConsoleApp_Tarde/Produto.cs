@@ -8,15 +8,16 @@ namespace ConsoleApp_Tarde
 {
     public class Produto
     {
+        private int Id;
+        private string Descricao;
+        private decimal Valor;
+
         public Produto(string descricao, int id, decimal valor)
         {
             Id = id;
             Descricao = descricao;
             Valor = valor;
         }
-        private int Id;
-        private string Descricao;
-        private decimal Valor;
         public string getDescricao()
         {
             return "Descrição do produto: " + Descricao;
